@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container-menu" id="container-menu">
+      <div class="container-instruction" id="containerInstruction">
+        <h1 style="text-align: center; margin-bottom: 20px">Archery Pop</h1>
+        <div>
+          <img
+            src="../assets/icon.png"
+            width="350px"
+            alt=""
+            style="margin-left: 80px; margin-bottom: 10px"
+          />
+        </div>
+        <h1 id="instructions-heading">Quick Game Instructions</h1>
+        <br />
+        <section>
+          <br />
+          <p>
+            Enter your name in the input field to start the game. The Play
+            button will be enabled once you enter your name.
+          </p>
+        </section>
+        <br />
+        <br />
+        <section>
+          <h3>How to Play:</h3>
+
+          <p>
+            - Use your mouse to aim the scope (crosshair) inside the game area.
+          </p>
+          <p>- Click falling targets to earn points.</p>
+          <p>- Targets will continuously fall from top to bottom.</p>
+          <p>- Avoid letting the targets reach the bottom of the game board.</p>
+
+          <div class="container-input">
+            <label for="name">Name : </label>
+            <input
+              id="nameInput"
+              type="text"
+              placeholder="Masukkan nama anda"
+            />
+            <div>
+              <button class="button-start" id="buttonStart" disabled>
+                Start
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="leaderboard">
+        <h1>Leaderboard</h1>
+        <select name="filterScore" id="filterScore" class="filterScore">
+          <option value="">Filter Score</option>
+          <option value="tertinggi">Highest</option>
+          <option value="terendah">Lowest</option>
+        </select>
+        <div id="leaderboardContent"></div>
+      </div>
+    </div>
+ 
+    <div class="container-game-board hidden" id="gameBoard">
+      <header style="display: flex; justify-content: space-between; gap: 300px">
+        <h1 id="textScore">Score: 0</h1>
+        <h1 id="textTimer">Timer:</h1> 
+      </header>
+      <div>
+        <canvas
+          id="canvas"
+          style="border: 2px solid; cursor: none"
+          width="960px"
+          height="600px"
+        ></canvas>
+      </div>
+      <div class="container-game-over hidden" id="gameOver">
+        <h1 id="titleGameEnd"></h1>
+        <p>Do you want to play again?</p>
+        <br />
+        <h3>Final Score: <span id="scoreGameOver"></span></h3>
+        <h3 id="heightScoreGameOver"></h3>
+        <h3 id="messageNewHeightScore"></h3>
+        <button type="submit" class="button-start" id="buttonMainMenu">
+          Main Menu
+        </button>
+        <button type="submit" class="button-start" id="buttonSaveScore">
+          Save Score
+        </button>
+        <button type="submit" class="button-start" id="buttonPlayAgain">
+          Play Again
+        </button>
+      </div>
+      <div class="container-game-pause hidden" id="gamePause">
+        <h1>Pause</h1>
+        <p>Do you want to continue ?</p>
+        <br />
+        <h3>Score: <span id="scorePause"></span></h3>
+        <h3>Timer: <span id="timerPause"></span></h3>
+        <button type="submit" class="button-start" id="buttonResume">
+          Resume
+        </button>
+        <button type="submit" class="button-start" id="buttonQuit">Quit</button>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

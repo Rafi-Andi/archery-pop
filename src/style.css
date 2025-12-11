@@ -1,0 +1,131 @@
+*,
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #8f0304;
+  color: white;
+}
+
+.container-game-board {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-menu {
+  margin-top: -20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filterScore {
+  padding: 5px 10px;
+  margin-bottom: 20px;
+}
+
+.container-instruction,
+.leaderboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #5c0303;
+  color: white;
+  max-width: 600px;
+  margin: auto;
+  margin-top: 50px;
+  padding: 50px;
+}
+
+.container-instruction .container-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-input input {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border: 1px solid white;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  padding: 8px 10px;
+  color: white;
+  margin-top: 10px;
+}
+.button-start {
+  cursor: pointer;
+  background-color: #0069d9;
+  border: none;
+  padding: 8px 20px;
+  color: white;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.button-start:hover {
+  background-color: #5d96d4;
+}
+
+.button-start:disabled {
+  background-color: #627f9e;
+}
+
+.container-game-over,
+.container-game-pause {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: #5c0303;
+  color: white;
+
+  max-width: 600px;
+  margin: auto;
+  margin-top: 80px;
+  padding: 60px 40px;
+
+  border-radius: 20px;
+
+  text-align: center;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.container-game-over h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  color: #00bfff;
+}
+
+.container-game-over p {
+  font-size: 1.2rem;
+  opacity: 0.85;
+}
+
+.container-game-over h3 {
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+.hidden {
+  display: none;
+}
